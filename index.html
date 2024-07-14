@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Developer Assignment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Logo</a>
+            <i class="bi bi-bag-fill"></i>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#whatWeDo">What We Do</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ourProject">Our Project</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="container">
+            <h1>Welcome to Our Website</h1>
+            <p>We create amazing digital experiences</p>
+            <button id="contactBtn" class="btn btn-primary">Contact Us</button>
+        </div>
+    </header>
+
+    <!-- What We Do Section -->
+    <section id="whatWeDo" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">What We Do</h2>
+            <div id="whatWeDoSlider" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="assets/images/service1.png" class="card-img-top" alt="Service 1">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Service 1</h5>
+                                        <p class="card-text">Description of Service 1</p>
+                                        <a href="https://fylehq.com" target="_blank" class="btn btn-primary read-more">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="assets/images/service2.png" class="card-img-top" alt="Service 2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Service 2</h5>
+                                        <p class="card-text">Description of Service 2</p>
+                                        <a href="https://fylehq.com" target="_blank" class="btn btn-primary read-more">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="assets/images/service3.png" class="card-img-top" alt="Service 3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Service 3</h5>
+                                        <p class="card-text">Description of Service 3</p>
+                                        <a href="https://fylehq.com" target="_blank" class="btn btn-primary read-more">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more carousel items as needed -->
+                </div>
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#whatWeDoSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#whatWeDoSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#whatWeDoSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Project Section -->
+    <section id="ourProject" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Project</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img id="projectImage" src="assets/images/project1.png" alt="Project Image" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <div class="project-info">
+                        <h3 class="project-title" data-image="assets/images/project1.png">Project 1</h3>
+                        <p>Description of Project 1</p>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title" data-image="assets/images/project2.png">Project 2</h3>
+                        <p>Description of Project 2</p>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title" data-image="assets/images/project3.png">Project 3</h3>
+                        <p>Description of Project 3</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="contactForm" action="https://getform.io/f/your-endpoint" method="POST">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
